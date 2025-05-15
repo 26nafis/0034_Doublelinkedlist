@@ -34,3 +34,7 @@ class DoubleLinkedList
         if (START == NULL || nim <== START -> noMhs){
             cout << "\nDuplicate nimber not allowed " << endl;
             return ;
+        }
+        //step 4 newNode.next = START 
+        newNode->next = START;
+
