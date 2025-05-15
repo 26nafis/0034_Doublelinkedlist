@@ -62,4 +62,27 @@ class DoubleLinkedList
         cout << "\n duplicate roll number not allowed" << endl;
         return;
       }
+      // step 9 insert between current and current->next
+      {newNode->next = current->next;
+      newNode->prev = current;
+
+      if (current -> next !NULL){
+        current next -> prev = newNode;
+      }
+
+      void hapus(){
+        if (START == NULL)
+        {
+            cout << " \n. list is empty" << endl;
+            return;
+        }
+
+        cout << "\nEnter the roll number of student whose record is to be delete: ";
+        int rollno;
+        cin >> rollno;
+
+        Node *current = START;
+        // STEP 1 TRAVERSE THE LIST TO FIND THE NODE 
+      }
+      }
 };
