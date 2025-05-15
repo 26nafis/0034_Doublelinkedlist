@@ -25,13 +25,13 @@ class DoubleLinkedList
         string nama;
         cout << "\n Enter the roll nimber of the student";
         cin >> nim;
-        node *newNode = new Node();
+        node *newNode = new node();
 
         // step 2 assign value to the data fields
         newNode -> noMhs = nim;
 
         // step 3 insret at begining if list is empty or nim is smalled
-        if (START == NULL || nim <== START -> noMhs){
+        if (START == NULL || nim <= START -> noMhs){
             cout << "\nDuplicate nimber not allowed " << endl;
             return ;
         }
@@ -52,8 +52,7 @@ class DoubleLinkedList
       // insert in between node 
       // step 8 locate potition for insertion
       node *current = START;
-      while (current-> next !=NULL && current->next->noMhs < nim)
-      {
+      while (current-> next !=NULL && current->next->noMhs < nim) {
         current = current -> next;
       }
       
@@ -108,9 +107,72 @@ class DoubleLinkedList
     }
     void traverse (){
         if (START == NULL){
-            cout << "\n Lsy is empty" << endl;
-            
+            cout << "\n List is empty" << endl;
+            return;
         }
+        //step 1 move to the last node
+    node *currentNode = START;
+    int i = 0;
+    while (currentNode->next != NULL)
+    {
+        currentNode = currentNode->prev;
+        i--;
+        
     }
+    //step 2 traverse backward
+    cout << "\nRecords in descending order of roll number are:\n";
+    while(currentNode != NULL)
+    {
+        cout << i + i << ". " << currentNode->noMhs << " " << endl;
+
+        //step 3
+        currentNode = currentNode->prev;
+        i--;
+
+    }
+    }
+    };
+    
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        node *current = START;
+
+        //step 1 traverse to find
+
+        while (current != NULL && current->noMhs != rollNo)
+            current = current->next;
+        // step 2 output result
+        if (current == NULL)
+        {
+            cout << " record no found\n";
+        }
+        else 
+        {
+            cout << " record no found\n";
+            cout << " roll number:" << current -> noMhs << endl;
+        }
+    };
+};
+
+int main ()
+{
+    DoubleLinkedList list;
+    char choise;
+
+    do 
+    {
+
+        
     }
 };
+
