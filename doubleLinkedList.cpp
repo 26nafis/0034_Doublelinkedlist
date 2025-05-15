@@ -80,12 +80,37 @@ class DoubleLinkedList
         cout << "\nEnter the roll number of student whose record is to be delete: ";
         int rollno;
         cin >> rollno;
+    }
 
         Node *current = START;
         // STEP 1 TRAVERSE THE LIST TO FIND THE NODE 
-        while (current != NULL && current->noMhs != rollno)
+        while (current != NULL && current->noMhs != rollno){
         current = current->next;
+        }
+
+      if (current == NULL)
+      {
+        cout << "Record not found" << endl;
+        return;
       }
-      if 
-      }
+      if (current == START){
+        START = current -> next;
+        if (START != NULL){
+            START -> prev = NULL;
+        }
+      }else{
+        current -> prev -> next = current -> next;
+        if (current -> next != NULL){
+            current -> next -> prev = current -> prev;
+        }
+        delete current;
+    cout << "record with roll number " << rollno << "deleted" << endl;
+    }
+    void traverse (){
+        if (START == NULL){
+            cout << "\n Lsy is empty" << endl;
+            
+        }
+    }
+    }
 };
