@@ -41,5 +41,8 @@ class DoubleLinkedList
         // step 5  start,prev = newnode (if start exist)
         if (START != NULL)
         START-> prev = newNode;
+
+        //step 6 newnode.prev = NULL
+        newNode->prev = NULL
       }
 };
