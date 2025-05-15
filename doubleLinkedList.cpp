@@ -31,6 +31,9 @@ class DoubleLinkedList
         newNode -> noMhs = nim;
 
         // step 3 insret at begining if list is empty or nim is smalled
-        if (START == NULL || nim)
+        if (START == NULL || nim <== START -> noMhs){
+            cout << "\nDuplicate nimber not allowed " <<endl;
+            return ;
+        }
       }
 };
