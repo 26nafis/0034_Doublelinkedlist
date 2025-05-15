@@ -25,5 +25,8 @@ class DoubleLinkedList
         string nama;
         cout << "\n Enter the roll nimber of the student";
         cin >> nim;
-      }
-};
+        node *newNode = new Node();
+
+        // step 2 assign value to the data fields
+        newNode -> noMhs = nim;
+
